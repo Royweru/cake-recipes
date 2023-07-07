@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Nav from './components/Nav'
 import supabase from '../../supabase'
 import { useState, useEffect } from "react"
+import Cards from './components/Cards'
 export default function Home() {
   const [ data, setData] = useState<cake[]>([])
   useEffect(()=>{
@@ -19,10 +20,9 @@ export default function Home() {
   },[])
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
+    <main className="flex min-h-screen flex-col items-center justify-between p-0">
         <Nav />
-      </div>
+        <Cards Cakes={data} />
     </main>
   )
 }
