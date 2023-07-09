@@ -1,6 +1,4 @@
 "use client"
-import Image from 'next/image'
-import Nav from './components/Nav'
 import supabase from '../../supabase'
 import { useState, useEffect } from "react"
 import Cards from './components/Cards'
