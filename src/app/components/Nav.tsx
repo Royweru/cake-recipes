@@ -6,9 +6,8 @@ const Nav = () => {
   const [state, setState] = useState(false);
 
   const navigation = [
-    { title: "HOME", path: "javascript:void(0)" },
-    { title: "BLOG", path: "javascript:void(0)" },
-    { title: "ADD", path: "javascript:void(0)" },
+    { title: "HOME", path: "/" },
+    { title: "ADD", path: "/Recipe" },
   ];
 
   return (
