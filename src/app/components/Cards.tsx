@@ -23,7 +23,7 @@ const Cards = ({Cakes}:props) => {
                         <div className="flex items-center mt-2 pt-3 ml-4 mr-2">
                             <div className="ml-3">
                                 
-                                <span className="block text-gray-400 text-sm">{items.created_at.toISOString()}</span>
+                                <span className="block text-gray-400 text-sm">{items.created_at}</span>
                             </div>
                         </div>
                         <div className="pt-3 ml-4 mr-2 mb-3">
