@@ -11,7 +11,6 @@ export default function Home() {
         console.error('Error fetching recipes:', error)
       }else{
         setData(data)
-        console.log(data)
       }
     }
     fetchData()

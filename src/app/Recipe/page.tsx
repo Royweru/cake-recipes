@@ -1,6 +1,7 @@
 "use client";
 import supabase from "../../../supabase";
 import { useState } from "react";
+import React, { FormEvent } from 'react';
 import { useRouter } from "next/router";
 import { redirect } from "next/dist/server/api-utils";
 
@@ -10,7 +11,7 @@ export default function Recipe() {
   const [title, seTitle] = useState("");
   const [recipe, setRecipe] = useState("");
  
-  const addRecipe = async (e: Event) => {   
+  const addRecipe = async (e: FormEvent<HTMLFormElement>):Promise<void> => {   
     e.preventDefault();
     const { data, error } = await supabase
       .from("Cakes")
