@@ -14,7 +14,7 @@ export default function Home() {
         post.recipe.toLowerCase().includes(search.toLowerCase())
     );
     setFilteredResults(filter)
-  });
+  },[data,search]);
 
   useEffect(() => {
     const fetchData = async () => {
