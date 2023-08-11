@@ -1,6 +1,7 @@
 "use client";
 import supabase from "../../supabase";
 import { useState, useEffect } from "react";
+import Searchbox from "./components/Searchbox";
 import Cards from "./components/Cards";
 export default function Home() {
   const [data, setData] = useState<cake[]>([]);
@@ -13,7 +14,7 @@ export default function Home() {
         post.title.toLowerCase().includes(search.toLowerCase()) ||
         post.recipe.toLowerCase().includes(search.toLowerCase())
     );
-    setFilteredResults(filter)
+    setFilteredResults(filter.reverse())
   },[data,search]);
 
   useEffect(() => {
@@ -30,7 +31,8 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-0">
-      <Cards Cakes={data} />
+      <Searchbox search={search} setSearch={setSearch} />
+      <Cards Cakes={filteredResults} />
     </main>
   );
 }

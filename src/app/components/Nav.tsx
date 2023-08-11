@@ -77,7 +77,7 @@ const Nav = () => {
         </div>
         <div className="hidden md:inline-block">
           <a
-            href="javascript:void(0)"
+            href="/Recipe"
             className="py-3 px-4 text-white bg-indigo-600 hover:bg-indigo-700 rounded-md shadow"
           >
             share a cake recipe!
